@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "955386645504",
+    "project_id": "papefirebase-be49a",
+    "storage_bucket": "papefirebase-be49a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955386645504:android:fceddec9b8ef84c2385ce5",
+        "android_client_info": {
+          "package_name": "com.example.papefirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBujeYk0w3EK-YlZN9nZycGYWO5sRrmhu4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

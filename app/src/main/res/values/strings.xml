@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">papeFirebase</string>
+    <string name="btn_Main">ADMINISTRADOR</string>
+    <string name="btn_Main2">USUARIO</string>
+</resources>
