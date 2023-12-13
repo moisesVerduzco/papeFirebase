@@ -23,7 +23,7 @@ import java.util.Map;
 public class createTareas extends AppCompatActivity {
 
     Button btn_añadir;
-    EditText tarea,Desc,FechaEntrega;
+    EditText tarea,descripcion,FechaEntrega;
     /* agregamos el mfirestore con sus dependencias y librerias*/
     private FirebaseFirestore mfirestore;
     @Override
@@ -41,7 +41,7 @@ public class createTareas extends AppCompatActivity {
         mfirestore = FirebaseFirestore.getInstance();
 
         tarea = findViewById(R.id.tarea);
-        Desc = findViewById(R.id.Desc);
+        descripcion = findViewById(R.id.Desc);
         FechaEntrega = findViewById(R.id.FechaEntrega);
         btn_añadir = findViewById(R.id.btn_añadir);
 
@@ -52,7 +52,7 @@ public class createTareas extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     String nombreTarea = tarea.getText().toString().trim();
-                    String nombreDesc = Desc.getText().toString().trim();
+                    String nombreDesc = descripcion.getText().toString().trim();
                     String Fecha = FechaEntrega.getText().toString().trim();
                     /* creamos un if para que por lo menos una tarea este llena antes de podera agregarla*/
                     if(nombreTarea.isEmpty() && nombreDesc.isEmpty()&& Fecha.isEmpty()){
@@ -70,7 +70,7 @@ public class createTareas extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     String nombreTarea = tarea.getText().toString().trim();
-                    String nombreDesc = Desc.getText().toString().trim();
+                    String nombreDesc = descripcion.getText().toString().trim();
                     String Fecha = FechaEntrega.getText().toString().trim();
 
                     if(nombreTarea.isEmpty() && nombreDesc.isEmpty()&& Fecha.isEmpty()){
@@ -138,15 +138,15 @@ public class createTareas extends AppCompatActivity {
 
     //obctener la informacion para el momentto de actualizar
     private void getTarea(String id){
-        mfirestore.collection("Tareas").document(id).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+        mfirestore.collection("tareas").document(id).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
             String nombreTarea = documentSnapshot.getString("tarea");
-            String nombreDesc = documentSnapshot.getString("Desc");
+            String nombreDesc = documentSnapshot.getString("descripcion");
             String Fecha = documentSnapshot.getString("FechaEntrega");
 
             tarea.setText(nombreTarea);
-            Desc.setText(nombreDesc);
+            descripcion.setText(nombreDesc);
             FechaEntrega.setText(Fecha);
 
             }

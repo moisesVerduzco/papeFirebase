@@ -13,8 +13,9 @@
         android:theme="@style/Theme.PapeFirebase"
         tools:targetApi="31">
         <activity
-            android:name=".Opcion_seccion"
-            android:exported="false" />
+            android:name=".principal_usuario"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".login_usuario"
             android:exported="false"
@@ -36,7 +37,7 @@
             android:exported="false"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".principal_usuario"
+            android:name=".Opcion_seccion"
             android:exported="true"
             android:theme="@style/AppTheme">
             <intent-filter>

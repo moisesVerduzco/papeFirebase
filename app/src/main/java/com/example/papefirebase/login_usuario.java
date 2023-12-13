@@ -93,11 +93,11 @@ public class login_usuario extends AppCompatActivity {
                             if (task.getResult().size() > 0) {
                                 // Si hay coincidencias, la autenticación es exitosa
                                 finish();
-                                startActivity(new Intent(login_usuario.this, MainActivity.class));
+                                startActivity(new Intent(login_usuario.this, principal_usuario.class));
                                 Toast.makeText(login_usuario.this, "Bienvenido", Toast.LENGTH_SHORT).show();
                             } else {
                                 // No hay coincidencias, muestra un mensaje de error
-                                Toast.makeText(login_usuario.this, "Error al iniciar sesión usu", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(login_usuario.this, "Error al iniciar sesión", Toast.LENGTH_SHORT).show();
                             }
                         } else {
                             // Error en la consulta
